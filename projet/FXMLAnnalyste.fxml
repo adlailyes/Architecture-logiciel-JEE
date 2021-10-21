@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="522.0" prefWidth="650.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AnnalysteController">
+   <children>
+      <Pane fx:id="pane" prefHeight="123.0" prefWidth="650.0" style="-fx-background-color: #ffa07a;">
+         <children>
+            <JFXHamburger fx:id="hamburger" layoutX="614.0" layoutY="4.0" style="-fx-background-color: #ffa07a;" />
+            <Label alignment="CENTER" layoutX="209.0" layoutY="26.0" prefHeight="72.0" prefWidth="275.0" style="-fx-background-color: #ffa07a;" text="Analyste" underline="true">
+               <font>
+                  <Font name="Forte" size="55.0" />
+               </font>
+               <effect>
+                  <InnerShadow height="35.83" radius="19.6375" width="44.72" />
+               </effect>
+            </Label>
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="175.0" prefHeight="522.0" prefWidth="175.0">
+               <effect>
+                  <DropShadow />
+               </effect></JFXDrawer>
+         </children>
+      </Pane>
+      <Label layoutX="209.0" layoutY="132.0" text="Role">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="228.0" text="Polyvalence">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="176.0" text="Vitesse">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="279.0" text="Taux d'erreurs">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="334.0" text="Types d'analyse">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="rand1" buttonType="RAISED" layoutX="561.0" layoutY="129.0" onAction="#generateRandom1" style="-fx-background-color: #ffa07a;" text="random">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="408.0" layoutY="449.0" style="-fx-background-color: #ffa07a;" text="Effacer">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="256.0" layoutY="449.0" style="-fx-background-color: #ffa07a;" text="Sauvegarder">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="rand2" buttonType="RAISED" layoutX="561.0" layoutY="330.0" onAction="#generateRandom2" style="-fx-background-color: #ffa07a;" text="random">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="quit" buttonType="RAISED" layoutX="508.0" layoutY="449.0" onAction="#exit" style="-fx-background-color: #ffa07a;" text="Quitter">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXButton>
+      <Circle fill="LIGHTSALMON" layoutX="195.0" layoutY="141.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="LIGHTSALMON" layoutX="195.0" layoutY="185.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="LIGHTSALMON" layoutX="195.0" layoutY="237.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="LIGHTSALMON" layoutX="195.0" layoutY="288.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="LIGHTSALMON" layoutX="195.0" layoutY="343.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <JFXRadioButton layoutX="302.0" layoutY="177.0" prefHeight="20.0" prefWidth="71.0" text="Haute" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <toggleGroup>
+            <ToggleGroup fx:id="group1" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="302.0" layoutY="229.0" prefHeight="20.0" prefWidth="71.0" text="Haute" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <toggleGroup>
+            <ToggleGroup fx:id="group2" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="302.0" layoutY="280.0" text="Haute" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+         <toggleGroup>
+            <ToggleGroup fx:id="group3" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="375.0" layoutY="177.0" text="Moyenne" toggleGroup="$group1" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="375.0" layoutY="229.0" text="Moyenne" toggleGroup="$group2" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="375.0" layoutY="280.0" text="Moyenne" toggleGroup="$group3" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="468.0" layoutY="177.0" text="Faible" toggleGroup="$group1" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="468.0" layoutY="229.0" text="Faible" toggleGroup="$group2" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXRadioButton>
+      <JFXRadioButton layoutX="468.0" layoutY="280.0" text="Faible" toggleGroup="$group3" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXRadioButton>
+      <JFXTextField fx:id="text1" alignment="CENTER" focusColor="AQUAMARINE" layoutX="388.0" layoutY="129.0" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="text2" alignment="CENTER" focusColor="AQUAMARINE" layoutX="395.0" layoutY="330.0" unFocusColor="BLACK">
+         <font>
+            <Font size="13.0" />
+         </font></JFXTextField>
+   </children>
+</AnchorPane>
